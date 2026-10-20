@@ -1,0 +1,80 @@
+//- Hero Section
+section.hero
+  .hero__overlay
+    .container
+      .hero__content
+        h1.hero__title Знайдіть ідеальне приміщення для вашого бізнесу
+        p.hero__subtitle Оренда офісів, коворкінгів та торгових площ у Києві
+        
+        form.search-bar(action="/search.html")
+          .search-bar__group
+            label.search-bar__label(for="space-type") Що шукаєте?
+            input#space-type.search-bar__input(type="text" placeholder="Офіс, Коворкінг, Торгівля...")
+          .search-bar__divider
+          .search-bar__group
+            label.search-bar__label(for="district") Район
+            select#district.search-bar__select
+              option Усі райони
+              option Печерський
+              option Подільський
+          button.btn.btn--primary.search-bar__btn(type="submit") Знайти
+
+//- Features Section
+section.features.container
+  h2.section-title Чому обирають нас?
+  .features__grid
+    .feature-card
+      .feature-card__icon
+        svg(width="24" height="24" viewBox="0 0 24 24" fill="none")
+          path(d="M20 6L9 17L4 12" stroke="#C5A059" stroke-width="3" stroke-linecap="round" stroke-linejoin="round")
+      h3.feature-card__title Швидкий пошук
+      p.feature-card__desc Фільтруйте за ціною, площею та розташуванням за секунди.
+    
+    .feature-card
+      .feature-card__icon
+        svg(width="24" height="24" viewBox="0 0 24 24" fill="none")
+          path(d="M20 6L9 17L4 12" stroke="#C5A059" stroke-width="3" stroke-linecap="round" stroke-linejoin="round")
+      h3.feature-card__title Онлайн-бронювання
+      p.feature-card__desc Обирайте дати в календарі та бронюйте приміщення 24/7.
+    
+    .feature-card
+      .feature-card__icon
+        svg(width="24" height="24" viewBox="0 0 24 24" fill="none")
+          path(d="M20 6L9 17L4 12" stroke="#C5A059" stroke-width="3" stroke-linecap="round" stroke-linejoin="round")
+      h3.feature-card__title Безпечні угоди
+      p.feature-card__desc Офіційні договори, прозорі рахунки та підтримка менеджера.
+
+//- Categories Section
+section.categories.container
+  h2.section-title Популярні категорії
+  .categories__grid
+    button.category-btn.category-btn--active Офіси
+    button.category-btn Коворкінги
+    button.category-btn Торгові площі
+
+//- Offers Section
+section.offers.container
+  .offers__header
+    h2.section-title Актуальні пропозиції
+    a.offers__link(href="/search.html") Дивитись усі →
+  
+  .offers__grid
+    //- Card 1
+    .offer-card
+      img.offer-card__image(src="/images/office.jpg" alt="Офісне приміщення з панорамними вікнами")
+      .offer-card__content
+        h3.offer-card__title Офісне приміщення, 150 кв.м.
+        p.offer-card__location Київ, Печерський район
+        .offer-card__footer
+          span.offer-card__price $2 500 / міс
+          a.btn.btn--primary(href="/office.html") Детальніше
+    
+    //- Card 2
+    .offer-card
+      img.offer-card__image(src="/images/coworking.jpg" alt="Коворкінг-студія з меблями")
+      .offer-card__content
+        h3.offer-card__title Коворкінг-студія, 50 кв.м.
+        p.offer-card__location Київ, Поділ. З ремонтом.
+        .offer-card__footer
+          span.offer-card__price $900 / міс
+          a.btn.btn--primary(href="/coworking.html") Детальніше
