@@ -1,0 +1,39 @@
+﻿<Window x:Class="MVVM_Cargo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:MVVM_Cargo"
+        Title="MVVM — Міжміські перевезення" Height="320" Width="400" WindowStartupLocation="CenterScreen">
+
+    <Window.DataContext>
+        <local:MainVM/>
+    </Window.DataContext>
+
+    <Grid Margin="15">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="45"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="Вага вантажу (кг):" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Weight, UpdateSourceTrigger=PropertyChanged}" VerticalContentAlignment="Center" Margin="5"/>
+
+        <Label Grid.Row="1" Content="Тариф за кг (грн):" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding TariffKg, UpdateSourceTrigger=PropertyChanged}" VerticalContentAlignment="Center" Margin="5"/>
+
+        <Label Grid.Row="2" Content="Відстань (км):" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Distance, UpdateSourceTrigger=PropertyChanged}" VerticalContentAlignment="Center" Margin="5"/>
+
+        <Label Grid.Row="3" Content="Тариф за км (грн):" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding TariffKm, UpdateSourceTrigger=PropertyChanged}" VerticalContentAlignment="Center" Margin="5"/>
+
+        <TextBlock Grid.Row="4" Grid.ColumnSpan="2" Text="{Binding Cost, StringFormat='Результат = {0} грн'}" 
+                   FontSize="14" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,10,0,0"/>
+    </Grid>
+</Window>

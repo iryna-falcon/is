@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="MVC_Cargo/MVC_Cargo.csproj" />
+  <Project Path="MVP_Cargo/MVP_Cargo.csproj" />
+  <Project Path="MVVM_Cargo/MVVM_Cargo.csproj" />
+</Solution>
